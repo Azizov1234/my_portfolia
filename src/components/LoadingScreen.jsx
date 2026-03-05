@@ -56,7 +56,7 @@ const LoadingScreen = ({ onComplete }) => {
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.07, duration: 0.5, ease: 'easeOut' }}
-                                className="text-4xl md:text-5xl font-bold tracking-widest"
+                                className="text-5xl md:text-6xl font-bold tracking-widest"
                                 style={{
                                     fontFamily: 'var(--font-mono)',
                                     color: i % 2 === 0 ? 'var(--neon-purple)' : 'white',
@@ -85,7 +85,7 @@ const LoadingScreen = ({ onComplete }) => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5 }}
-                        className="relative z-10 text-xs font-mono text-purple-400 tracking-widest"
+                        className="relative z-10 text-sm font-mono text-purple-400 tracking-widest"
                     >
                         {Math.min(Math.round(progress), 100)}%
                     </motion.span>
@@ -94,7 +94,7 @@ const LoadingScreen = ({ onComplete }) => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 0.5 }}
                         transition={{ delay: 1 }}
-                        className="relative z-10 mt-6 text-xs text-slate-600 font-mono tracking-[0.3em] uppercase"
+                        className="relative z-10 mt-6 text-sm text-slate-600 font-mono tracking-[0.3em] uppercase"
                     >
                         Backend Engineer
                     </motion.p>

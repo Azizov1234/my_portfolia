@@ -69,8 +69,8 @@ const SkillCard = ({ icon, label, level, color }) => {
                 >
                     {icon}
                 </div>
-                <span className="text-slate-200 font-semibold text-sm">{label}</span>
-                <span className="ml-auto text-xs font-mono text-slate-600">{level}%</span>
+                <span className="text-slate-200 font-semibold text-base">{label}</span>
+                <span className="ml-auto text-sm font-mono text-slate-600">{level}%</span>
             </div>
 
             {/* Progress bar */}
@@ -94,10 +94,10 @@ const TechStack = ({ lang }) => {
 
     return (
         <section id="stack" className="relative z-10 section-pad w-full flex flex-col items-center">
-            <div className="section-sep mb-24 w-full" />
-            <div className="w-full max-w-5xl px-4 sm:px-6 flex flex-col items-center">
+            <div className="section-sep mb-6 w-full" />
+            <div className="w-full max-w-6xl px-4 sm:px-6 flex flex-col items-center">
 
-                <div className="text-center mb-16">
+                <div className="text-center mb-10">
                     <motion.span
                         initial={{ opacity: 0, y: 16 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -111,13 +111,13 @@ const TechStack = ({ lang }) => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.08 }}
-                        className="text-4xl md:text-5xl font-bold text-white"
+                        className="text-5xl md:text-6xl font-bold text-white"
                     >
                         {lang === 'en' ? 'Tech ' : lang === 'ru' ? 'Стек ' : 'Tech '}<span className="gradient-text">Stack</span>
                     </motion.h2>
                 </div>
 
-                <div ref={ref} className="space-y-14">
+                <div ref={ref} className="space-y-5 w-full">
                     {STACKS.map((group, gi) => (
                         <div key={gi}>
                             <motion.div
@@ -125,10 +125,10 @@ const TechStack = ({ lang }) => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: gi * 0.06 }}
-                                className="flex items-center justify-center gap-3 mb-8"
+                                className="flex items-center justify-center gap-3 mb-4"
                             >
                                 <div className="w-1 h-6 rounded-full" style={{ background: group.color }} />
-                                <span className="text-xs font-mono font-bold tracking-[0.2em] uppercase" style={{ color: group.color }}>
+                                <span className="text-sm font-mono font-bold tracking-[0.2em] uppercase" style={{ color: group.color }}>
                                     {group.cat[lang]}
                                 </span>
                             </motion.div>
@@ -137,7 +137,7 @@ const TechStack = ({ lang }) => {
                                 initial="hidden"
                                 animate={inView ? 'show' : 'hidden'}
                                 variants={{ hidden: {}, show: { transition: { staggerChildren: 0.08, delayChildren: gi * 0.1 } } }}
-                                className="flex flex-wrap gap-4 items-stretch justify-center"
+                                className="flex flex-wrap gap-3 items-stretch justify-center"
                             >
                                 {group.items.map((item) => (
                                     <motion.div

@@ -70,21 +70,21 @@ const Contact = ({ lang }) => {
     const t = T[lang] || T.en
     return (
         <section id="contact" className="relative z-10 section-pad w-full flex flex-col items-center">
-            <div className="section-sep mb-24 w-full" />
+            <div className="section-sep mb-6 w-full" />
             <div className="absolute left-1/2 -translate-x-1/2 w-[500px] h-[300px] rounded-full bg-purple-600/8 blur-[100px] pointer-events-none" />
 
-            <div className="w-full max-w-4xl px-4 sm:px-6 relative z-10 flex flex-col items-center">
-                <div className="text-center mb-16">
+            <div className="w-full max-w-5xl px-4 sm:px-6 relative z-10 flex flex-col items-center">
+                <div className="text-center mb-10">
                     <motion.span initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                         className="inline-block text-[10px] font-mono font-bold tracking-[0.3em] text-cyan-400 uppercase mb-4">
                         {t.tag}
                     </motion.span>
                     <motion.h2 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.08 }}
-                        className="text-4xl md:text-5xl font-bold text-white mb-4">
+                        className="text-5xl md:text-6xl font-bold text-white mb-4">
                         {t.h}<span className="gradient-text">{t.hs}</span>
                     </motion.h2>
                     <motion.p initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.16 }}
-                        className="text-slate-500 max-w-md mx-auto text-sm leading-loose">
+                        className="text-slate-500 max-w-md mx-auto text-base leading-loose">
                         {t.p}
                     </motion.p>
                 </div>
@@ -120,8 +120,8 @@ const Contact = ({ lang }) => {
                                 <div className="text-[10px] font-mono text-slate-600 mb-0.5 uppercase tracking-wider">
                                     {c.desc[lang] || c.desc.en}
                                 </div>
-                                <div className="text-white font-bold text-sm mb-0.5">{c.label}</div>
-                                <div className="text-xs font-mono truncate" style={{ color: c.color }}>{c.val}</div>
+                                <div className="text-white font-bold text-base mb-0.5">{c.label}</div>
+                                <div className="text-sm font-mono truncate" style={{ color: c.color }}>{c.val}</div>
                             </div>
 
                             <div className="relative z-10 text-slate-700 group-hover:text-slate-300 transition-colors text-base ml-2">→</div>
@@ -130,7 +130,7 @@ const Contact = ({ lang }) => {
                 </motion.div>
 
                 <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.6 }}
-                    className="text-center text-slate-600 text-xs font-mono mt-10">
+                    className="text-center text-slate-600 text-sm font-mono mt-10">
                     {t.reply}
                 </motion.p>
             </div>

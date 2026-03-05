@@ -60,8 +60,8 @@ const SkillCard = ({ icon, label, level, groupColor }) => (
             >
                 {icon}
             </div>
-            <span className="text-slate-200 font-medium text-sm">{label}</span>
-            <span className="ml-auto text-xs text-slate-500 font-mono">{level}%</span>
+            <span className="text-slate-200 font-medium text-base">{label}</span>
+            <span className="ml-auto text-sm text-slate-500 font-mono">{level}%</span>
         </div>
 
         {/* Progress bar */}
@@ -91,7 +91,7 @@ const Skills = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="inline-block text-xs font-semibold tracking-widest text-cyan-400 uppercase mb-4"
+                        className="inline-block text-sm font-semibold tracking-widest text-cyan-400 uppercase mb-4"
                     >
                         Expertise
                     </motion.span>
@@ -100,7 +100,7 @@ const Skills = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl font-bold text-white"
+                        className="text-5xl md:text-6xl font-bold text-white"
                     >
                         Technical <span className="gradient-text">Skills</span>
                     </motion.h2>
@@ -121,7 +121,7 @@ const Skills = () => {
                                     className="w-1 h-6 rounded-full"
                                     style={{ background: group.color }}
                                 />
-                                <span className="text-sm font-semibold text-slate-400 uppercase tracking-wider">
+                                <span className="text-base font-semibold text-slate-400 uppercase tracking-wider">
                                     {group.category}
                                 </span>
                             </motion.div>

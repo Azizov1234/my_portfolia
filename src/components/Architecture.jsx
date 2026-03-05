@@ -54,10 +54,10 @@ const Architecture = ({ lang }) => {
 
     return (
         <section id="architecture" className="relative z-10 section-pad w-full flex flex-col items-center">
-            <div className="section-sep mb-24 w-full" />
-            <div className="w-full max-w-5xl px-4 sm:px-6 flex flex-col items-center">
+            <div className="section-sep mb-6 w-full" />
+            <div className="w-full max-w-6xl px-4 sm:px-6 flex flex-col items-center">
 
-                <div className="text-center mb-14">
+                <div className="text-center mb-10">
                     <motion.span
                         initial={{ opacity: 0, y: 16 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -71,21 +71,21 @@ const Architecture = ({ lang }) => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.08 }}
-                        className="text-4xl md:text-5xl font-bold text-white"
+                        className="text-5xl md:text-6xl font-bold text-white"
                     >
                         {t.h}<span className="gradient-text">{t.hs}</span>
                     </motion.h2>
                 </div>
 
                 {/* Tab selector */}
-                <div className="flex justify-center gap-3 mb-12 flex-wrap">
+                <div className="flex justify-center gap-3 mb-8 flex-wrap">
                     {FLOWS.map((f) => (
                         <motion.button
                             key={f.id}
                             onClick={() => setActive(f.id)}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className={`px-5 py-2.5 rounded-xl text-xs font-mono font-bold tracking-wider uppercase transition-all ${active === f.id ? 'text-white' : 'glass text-slate-500 hover:text-slate-300 border border-white/5'
+                            className={`px-5 py-2.5 rounded-xl text-sm font-mono font-bold tracking-wider uppercase transition-all ${active === f.id ? 'text-white' : 'glass text-slate-500 hover:text-slate-300 border border-white/5'
                                 }`}
                             style={active === f.id ? {
                                 background: `${f.color}25`,
@@ -135,8 +135,8 @@ const Architecture = ({ lang }) => {
                                                 style={{ border: `1px solid ${flow.color}`, animation: 'pulseGlow 2s ease-in-out infinite' }}
                                             />
                                         )}
-                                        <div className="font-mono font-bold text-sm md:text-base mb-2 px-1" style={{ color: flow.color }}>{step.label}</div>
-                                        <div className="text-xs text-slate-400 leading-tight px-3">{step.sub}</div>
+                                        <div className="font-mono font-bold text-base md:text-base mb-2 px-1" style={{ color: flow.color }}>{step.label}</div>
+                                        <div className="text-sm text-slate-400 leading-tight px-3">{step.sub}</div>
                                     </motion.div>
 
                                     {i < (flow.steps.length - 1) && (
@@ -153,21 +153,6 @@ const Architecture = ({ lang }) => {
                             ))}
                         </div>
 
-                        <div className="relative z-10 mt-10 pt-8 border-t border-white/5 flex flex-wrap justify-center gap-6">
-                            {flow?.steps.map((step, i) => (
-                                <motion.div
-                                    key={step.id + '-desc'}
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.5 + i * 0.08 }}
-                                    className="text-center w-[calc(50%-0.75rem)] md:w-32"
-                                >
-                                    <div className="text-[10px] font-mono font-bold mb-1" style={{ color: flow?.color + 'bb' }}>Step {i + 1}</div>
-                                    <div className="text-xs text-slate-400">{step.label}</div>
-                                    <div className="text-[10px] text-slate-600 mt-0.5">{step.sub}</div>
-                                </motion.div>
-                            ))}
-                        </div>
                     </motion.div>
                 </AnimatePresence>
             </div>

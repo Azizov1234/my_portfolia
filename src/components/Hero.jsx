@@ -12,10 +12,10 @@ const ROLES = [
 ]
 
 const KEYWORDS = [
-    { text: 'Scalable', x: '8%', y: '25%', size: 'text-xs', delay: 0.8 },
-    { text: 'Secure', x: '80%', y: '20%', size: 'text-xs', delay: 1.1 },
-    { text: 'NestJS', x: '5%', y: '65%', size: 'text-xs', delay: 0.6 },
-    { text: 'REST', x: '85%', y: '60%', size: 'text-xs', delay: 1.3 },
+    { text: 'Scalable', x: '8%', y: '25%', size: 'text-sm', delay: 0.8 },
+    { text: 'Secure', x: '80%', y: '20%', size: 'text-sm', delay: 1.1 },
+    { text: 'NestJS', x: '5%', y: '65%', size: 'text-sm', delay: 0.6 },
+    { text: 'REST', x: '85%', y: '60%', size: 'text-sm', delay: 1.3 },
     { text: 'Docker', x: '12%', y: '80%', size: 'text-[10px]', delay: 0.9 },
     { text: 'Prisma', x: '78%', y: '78%', size: 'text-[10px]', delay: 1.0 },
     { text: 'JWT', x: '45%', y: '88%', size: 'text-[10px]', delay: 1.4 },
@@ -87,7 +87,7 @@ const Hero = ({ lang }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full glass-light text-xs sm:text-sm font-mono font-bold text-emerald-400 mb-10 tracking-widest whitespace-nowrap shadow-lg shadow-emerald-500/10"
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full glass-light text-sm sm:text-base font-mono font-bold text-emerald-400 mb-10 tracking-widest whitespace-nowrap shadow-lg shadow-emerald-500/10"
                 style={{ border: '1px solid rgba(16,185,129,0.35)' }}
             >
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" style={{ animation: 'ping 1.5s ease-in-out infinite' }} />
@@ -99,7 +99,7 @@ const Hero = ({ lang }) => {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-none mb-4"
+                className="text-7xl md:text-9xl lg:text-[10rem] font-bold tracking-tight leading-none mb-6"
                 style={{ fontFamily: 'var(--font-main)' }}
             >
                 <span className="text-white">Abdulaziz</span>
@@ -120,7 +120,7 @@ const Hero = ({ lang }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.45 }}
-                className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
+                className="text-slate-400 text-xl md:text-2xl max-w-3xl mx-auto mb-14 leading-relaxed"
             >
                 {lang === 'en'
                     ? 'I build scalable, secure, production-ready backend systems.'
@@ -141,7 +141,7 @@ const Hero = ({ lang }) => {
                     whileHover={{ scale: 1.06, y: -3 }}
                     whileTap={{ scale: 0.95 }}
                     id="hero-view-projects"
-                    className="group flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-sm sm:text-base text-white
+                    className="group flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-base sm:text-base text-white
             magnetic-btn tracking-widest uppercase whitespace-nowrap w-full sm:w-auto
             transition-all duration-300"
                     style={{
@@ -159,7 +159,7 @@ const Hero = ({ lang }) => {
                     whileHover={{ scale: 1.06, y: -3 }}
                     whileTap={{ scale: 0.95 }}
                     id="hero-download-cv"
-                    className="flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-sm sm:text-base text-slate-300
+                    className="flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-base sm:text-base text-slate-300
             magnetic-btn glass neon-border-purple hover:text-white tracking-widest uppercase whitespace-nowrap w-full sm:w-auto
             transition-all duration-300 hover:bg-purple-600/10"
                 >
@@ -181,7 +181,7 @@ const Hero = ({ lang }) => {
                         initial={{ opacity: 0, scale: 0.7 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.9 + i * 0.06 }}
-                        className="px-3 py-1.5 rounded-full text-xs font-mono font-semibold text-slate-500 glass-light tracking-wider"
+                        className="px-3 py-1.5 rounded-full text-sm font-mono font-semibold text-slate-500 glass-light tracking-wider"
                         style={{ border: '1px solid rgba(255,255,255,0.06)' }}
                     >
                         {t}

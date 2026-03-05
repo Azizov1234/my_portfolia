@@ -44,7 +44,7 @@ const Navbar = ({ lang, setLang }) => {
                 className={`fixed top-0 inset-x-0 w-full z-50 transition-all duration-500
           ${scrolled ? 'glass shadow-[0_4px_30px_rgba(0,0,0,0.5)] py-3' : 'py-5'}`}
             >
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
                     {/* Logo */}
                     <motion.button
                         onClick={() => scrollTo('home')}
@@ -86,7 +86,7 @@ const Navbar = ({ lang, setLang }) => {
                     {/* Right controls */}
                     <div className="flex items-center gap-3">
                         {/* Lang toggle */}
-                        <div className="flex items-center glass-light border border-white/10 rounded-lg p-1 text-xs font-mono font-bold flex-shrink-0">
+                        <div className="flex items-center glass-light border border-white/10 rounded-lg p-1 text-sm font-mono font-bold flex-shrink-0">
                             {(['en', 'ru', 'uz']).map((l) => (
                                 <motion.button
                                     key={l}
@@ -107,7 +107,7 @@ const Navbar = ({ lang, setLang }) => {
                             onClick={() => scrollTo('contact')}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="hidden md:flex magnetic-btn items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold tracking-wider uppercase
+                            className="hidden md:flex magnetic-btn items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold tracking-wider uppercase
                 neon-border-purple text-purple-300 hover:text-white hover:bg-purple-600/20
                 transition-all duration-300"
                         >
@@ -143,7 +143,7 @@ const Navbar = ({ lang, setLang }) => {
                                 initial={{ opacity: 0, x: -16 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: i * 0.04 }}
-                                className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold tracking-wider uppercase transition-all
+                                className={`w-full text-left px-4 py-3 rounded-xl text-base font-semibold tracking-wider uppercase transition-all
                   ${active === link.id
                                         ? 'text-purple-300 bg-purple-600/15 border border-purple-500/20'
                                         : 'text-slate-500 hover:text-slate-200 hover:bg-white/5'}`}

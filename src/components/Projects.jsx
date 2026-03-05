@@ -125,7 +125,7 @@ const TiltCard = ({ project, lang }) => {
                     <div className="flex items-start justify-between mb-5">
                         <div>
                             <span
-                                className="inline-block text-xs font-mono font-bold px-3 py-1.5 rounded-full mb-3 tracking-wider"
+                                className="inline-block text-sm font-mono font-bold px-3 py-1.5 rounded-full mb-3 tracking-wider"
                                 style={{ color: project.accent, background: `${project.accent}18`, border: `1px solid ${project.accent}30` }}
                             >
                                 {project.badge[lang] || project.badge.en}
@@ -145,7 +145,7 @@ const TiltCard = ({ project, lang }) => {
                         </div>
                     </div>
 
-                    <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-1">
+                    <p className="text-slate-400 text-base leading-relaxed mb-6 flex-1">
                         {project.desc[lang] || project.desc.en}
                     </p>
 
@@ -153,7 +153,7 @@ const TiltCard = ({ project, lang }) => {
                         {project.tech.map((t) => {
                             const m = TECH_META[t]
                             return (
-                                <span key={t} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-mono font-semibold glass border border-white/8" style={{ color: m?.color }}>
+                                <span key={t} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-mono font-semibold glass border border-white/8" style={{ color: m?.color }}>
                                     <span>{m?.icon}</span>{t}
                                 </span>
                             )
@@ -169,19 +169,19 @@ const Projects = ({ lang }) => {
     const t = T[lang] || T.en
     return (
         <section id="projects" className="relative z-10 section-pad w-full flex flex-col items-center">
-            <div className="section-sep mb-24 w-full" />
-            <div className="w-full max-w-5xl px-4 sm:px-6 flex flex-col items-center">
-                <div className="text-center mb-16">
+            <div className="section-sep mb-6 w-full" />
+            <div className="w-full max-w-6xl px-4 sm:px-6 flex flex-col items-center">
+                <div className="text-center mb-10">
                     <motion.span initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                         className="inline-block text-[10px] font-mono font-bold tracking-[0.3em] text-purple-400 uppercase mb-4">
                         {t.tag}
                     </motion.span>
                     <motion.h2 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.08 }}
-                        className="text-4xl md:text-5xl font-bold text-white mb-4">
+                        className="text-5xl md:text-6xl font-bold text-white mb-4">
                         {t.h}<span className="gradient-text">{t.hs}</span>
                     </motion.h2>
                     <motion.p initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.16 }}
-                        className="text-slate-500 max-w-md mx-auto text-sm">
+                        className="text-slate-500 max-w-md mx-auto text-base">
                         {t.sub}
                     </motion.p>
                 </div>
